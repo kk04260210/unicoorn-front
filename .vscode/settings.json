@@ -1,0 +1,35 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "liveServer.settings.fullReload": true,
+    "liveServer.settings.wait": 10,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 100,
+    "tabnine.experimentalAutoImports": true,
+    "workbench.editorAssociations": {
+      ".jar": "default",
+      ".csv": "default"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "git.autofetch": true,
+    "workbench.iconTheme": "file-icons",
+    "[python]": {
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 120,
+    "prettier.singleAttributePerLine": false,
+    "prettier.singleQuote": false,
+    "prettier.jsxSingleQuote": false
+  }
