@@ -1,21 +1,17 @@
 import { FC } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-
 import { useLoginUser } from '../_wheel/security/LoginUserProvider';
-import { GourmetPage } from '../gourmet/GourmetPage';
-import { HomePage } from '../home/HomePage';
 import { LoginPage } from '../login/LoginPage';
-import { SelfUserPageNew } from '../selfuser/SelfUserPageNew';
-import { SelfUserPageProfile } from '../selfuser/SelfUserPageProfile';
-import { TaskPage } from '../task/TaskPage';
+import { SelfUserPageNew } from '../selfuser/SelfUserPageNew';  
 import { UserPage } from '../user/UserPage';
 import { UserPageAdd } from '../user/UserPageAdd';
 import { UserPageDetail } from '../user/UserPageDetail';
-import { WeatherPage } from '../weather/WeatherPage';
-import { ZipPage } from '../zip/ZipPage';
 import { MainTemplate } from './MainTemplate';
 import { Authority } from './types/AuthorityTypes';
-import { BmiPage } from '../bmi/BmiPage';
+import { PasswordPage } from '../password/passwordPage';
+import { MailPage } from '../mail/mailPage';
+import { OtpPage } from '../otp/otpPage';
+import { MailTokenPage } from '../token/mailPage';
 
 type RouterType = {
   path: `/${string}`;
@@ -25,37 +21,25 @@ type RouterType = {
 // TODO 全員アクセス可
 const AuthRouters: Array<RouterType> = [
   {
-    path: '/home',
-    children: <HomePage />,
+    path: '/pass',
+    children: <PasswordPage />,
   },
   {
-    path: '/task',
-    children: <TaskPage />,
+    path: '/mail',
+    children: <MailPage />,
   },
   {
-    path: '/gourmet',
-    children: <GourmetPage />,
+    path: '/otp',
+    children: <OtpPage />,
   },
   {
-    path: '/weather',
-    children: <WeatherPage />,
+    path: '/token',
+    children: <MailTokenPage />,
   },
   {
-    path: '/zip',
-    children: <ZipPage />,
+    path: '/auth',
+    children: <AuthPage />,
   },
-  {
-    path: '/profile',
-    children: <SelfUserPageProfile />,
-  },
-  {
-    path: '/bmi',
-    children: <BmiPage />,
-  },
-  // {
-  //   path: '/dog',
-  //   children: < />,
-  // },
 ];
 
 // TODO 管理者のみアクセス可

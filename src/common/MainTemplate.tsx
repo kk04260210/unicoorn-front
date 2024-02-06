@@ -8,6 +8,7 @@ import Toolbar from '@mui/material/Toolbar';
 import { FC } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
+
 import { useLoginUser } from '../_wheel/security/LoginUserProvider';
 
 export const MainTemplate: FC = () => {
@@ -17,13 +18,13 @@ export const MainTemplate: FC = () => {
     <>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="fixed">
-          <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <Toolbar style={{ display: 'flex', justifyContent: 'space-between', background: '#D21919' }}>
             <Box style={{ display: 'flex', alignItems: 'center' }}>
               <HomeRepairServiceIcon sx={{ mr: 2 }} />
               <Box>
-                <Link to="/home" style={{ color: 'inherit', textDecoration: 'none' }}>
-                  <Typography variant="h6">WebPortal</Typography>
-                </Link>
+                <label  style={{ color: 'inherit', textDecoration: 'none' }}>
+                  <Typography variant="h6">JobNavi Account</Typography>
+                </label>
               </Box>
             </Box>
             <Button type="submit" color="inherit" onClick={() => logout(false)}>
