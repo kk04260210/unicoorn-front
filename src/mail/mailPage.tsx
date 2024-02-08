@@ -4,8 +4,10 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { useMailApi } from './useMailApi';
 import React from 'react';
 import { MailTmp } from './templates/mailTmp';
+import { useNavigate } from 'react-router-dom';
 
 export const MailPage: FC = () => {
+  const navigation = useNavigate();
   // エンドポイントURLを設定ファイルから読み込み
   const URL_API_ENDPOINT = import.meta.env.VITE_REACT_APP_ENDPOINT_URL;
   // データ取得処理
@@ -35,6 +37,7 @@ export const MailPage: FC = () => {
   const handleOpen = () => {
     getmailData(getValues(), setmailData);
     setOpen(true);
+    navigation('/otp', { state: getValues() });
   };
   const handleClose = () => setOpen(false);
   const [userNoCheck, setUserNoCheck] = useState(false);

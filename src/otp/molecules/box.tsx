@@ -26,7 +26,7 @@ export const BoxOtp: FC<Props> = (props: Props) => {
         )}
       /> */}
       <ButtonOtp otpCheck={otpCheck} buttonOnClick={buttonOnClick}>
-        パスワードを設定する
+        検証
       </ButtonOtp>
     </Box>
   );

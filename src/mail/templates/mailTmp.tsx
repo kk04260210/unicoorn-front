@@ -35,7 +35,7 @@ export const MailTmp: FC<Props> = (props: Props) => {
         </BaseLabel>
         <span>
           ログインに必要な情報をお忘れの方は、下記のフォームに
-          必要事項をご記入の上、「メール送信」をタップしてください。
+          学籍番号を入力し、「メール送信」をタップしてください。
           登録されているメールアドレスに「ワンタイムパスワード」を 記載したメールをお送りします。
         </span>
         <Box sx={{ width: '100%', maxWidth: '400px', marginTop: 3 }}>

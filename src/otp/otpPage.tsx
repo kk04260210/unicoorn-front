@@ -3,9 +3,15 @@ import { otpForm, otpData } from './otpType';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useOtpApi } from './useOtpApi';
 import { TmpOtp } from './templates/otpTmp';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+
+import { mailForm } from '../mail/mailTyep';
 
 export const OtpPage: FC = () => {
+  const location = useLocation();
+  const data = location.state as mailForm;
+  console.log(data.userNo);
+
   // エンドポイントURLを設定ファイルから読み込み
   const URL_FRONT_TOKEN = import.meta.env.VITE_REACT_APP_URL_FRONT_TOKEN;
   // データ取得処理
@@ -20,6 +26,7 @@ export const OtpPage: FC = () => {
   const useFormMethods = useForm<otpForm>({
     defaultValues: {
       otp: '',
+      userNo: data.userNo,
     },
     mode: 'onChange',
   });

@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import { passData, passForm } from './passwordTypes';
-import { useForm } from 'react-hook-form';
+import { FormProvider, useForm } from 'react-hook-form';
 import { usePassApi } from './usePasswordApi';
 import React from 'react';
 import { TmpPass } from './templates/passTmp';
@@ -69,25 +69,25 @@ export const PasswordPage: FC = () => {
   };
 
   return (
-    <>
-      <TmpPass
-        control={control}
-        password={password}
-        setPassword={setPassword}
-        passwordType={passwordType}
-        setPasswordType={setPasswordType}
-        passError={passError}
-        setpassError={setpassError}
-        repassword={repassword}
-        setrePassword={setrePassword}
-        repasswordType={repasswordType}
-        setrePasswordType={setrePasswordType}
-        passwordMatch={passwordMatch}
-        handleOpen={handleOpen}
-        handleClose={handleClose}
-        handleCheck={handleCheck}
-        open={open}
-      />
-    </>
+      <FormProvider {...useFormMethods}>
+        <TmpPass
+          control={control}
+          password={password}
+          setPassword={setPassword}
+          passwordType={passwordType}
+          setPasswordType={setPasswordType}
+          passError={passError}
+          setpassError={setpassError}
+          repassword={repassword}
+          setrePassword={setrePassword}
+          repasswordType={repasswordType}
+          setrePasswordType={setrePasswordType}
+          passwordMatch={passwordMatch}
+          handleOpen={handleOpen}
+          handleClose={handleClose}
+          handleCheck={handleCheck}
+          open={open}
+        />
+      </FormProvider>
   );
 };

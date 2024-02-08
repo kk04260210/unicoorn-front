@@ -10,6 +10,7 @@ type Props = {
   otpCheck: boolean;
   handleOtp: () => void;
   buttonOnClick: () => void;
+  
 };
 
 export const OrgOtp: FC<Props> = (props: Props) => {
@@ -18,7 +19,7 @@ export const OrgOtp: FC<Props> = (props: Props) => {
     <Box
       sx={{
         display: 'flex',
-        // flexDirection: 'column',
+        flexDirection: 'column',
         alignItems: 'center',
       }}
     >
@@ -26,13 +27,13 @@ export const OrgOtp: FC<Props> = (props: Props) => {
         ワンタイムパスワード入力画面
       </BaseLabel>
       <span>ご登録されたメールアドレスに送信された 「ワンタイムパスワード」入力してください。</span>
-      <BoxOtp
-        otp={otp}
-        setotp={setotp}
-        otpCheck={otpCheck}
-        handleOtp={handleOtp}
-        buttonOnClick={buttonOnClick}
-      />
+      <BoxOtp 
+        otp={otp} 
+        setotp={setotp} 
+        otpCheck={otpCheck} 
+        handleOtp={handleOtp} 
+        buttonOnClick={buttonOnClick} 
+        />
       <Divider />
     </Box>
   );

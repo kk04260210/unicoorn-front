@@ -1,5 +1,6 @@
 export type otpForm = {
   otp: String;
+  userNo: String;
 };
 
 export type otpData = {
