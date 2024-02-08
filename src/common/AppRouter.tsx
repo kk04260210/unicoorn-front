@@ -36,10 +36,10 @@ const AuthRouters: Array<RouterType> = [
     path: '/token',
     children: <MailTokenPage />,
   },
-  {
-    path: '/auth',
-    children: <AuthPage />,
-  },
+  // {
+  //   path: '/auth',
+  //   children: <AuthPage />,
+  // },
 ];
 
 // TODO 管理者のみアクセス可
